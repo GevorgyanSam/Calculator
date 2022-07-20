@@ -1,0 +1,115 @@
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    user-select: none;
+    --claculator-background-color: rgb(131 177 227);
+    --btn-numbers-color: black;
+    --border-color: royalblue;
+    --border-hover-color: royalblue;
+    --border-pixel: 2px;
+    --transition: 1s;
+    transition: var(--transition);
+}
+body.dark{
+    background-image: url(../img/1.webp);
+    --claculator-background-color: black;
+    --btn-numbers-color: white;
+    --border-color: black;
+    --border-pixel: 2px;
+    transition: var(--transition);
+}
+.calculatorParent{
+    height: 780px;
+    width: 450px;
+    background-color: var(--claculator-background-color);
+    box-shadow: 0 0 20px 5px royalblue;
+    margin: 90px auto;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition);
+}
+#result{
+    background-color: rgba(0, 0, 0, 0);
+    height: 200px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    border: none;
+    font-size: 75px;
+    padding-top: 110px;
+    cursor: default;
+    margin-bottom: 65px;
+    padding-left: 30px;
+    color: var(--btn-numbers-color);
+    transition: var(--transition);
+}
+#result::placeholder{
+    color: var(--btn-numbers-color);
+    transition: var(--transition);
+}
+.buttonsParent{
+    width: 100%;
+    transition: var(--transition);
+}
+input[type="button"]{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: 16px;
+    margin-top: 10px;
+    color: var(--btn-numbers-color);
+    background-color: var(--btn-numbers-background-color);
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    border: var(--border-pixel) solid var(--border-color);
+    transition: .2s;
+}
+input[type="button"]:active{
+    transform: scale(0.9);
+}
+input[type="button"]:hover{
+    border: var(--border-pixel) solid var(--border-hover-color);
+    box-shadow: 0 0 5px 1px darkblue;
+}
+input[value="0"]{
+    width: 200px;
+    height: 80px;
+    border-radius: 80px;
+}
+input[value="C"],
+input[value="+/-"],
+input[value="%"]{
+    background-color: royalblue;
+}
+input[value="/"],
+input[value="*"],
+input[value="-"],
+input[value="+"],
+input[value="="]{
+    background-color: rgb(23, 23, 199);
+}
+img{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    border-radius: 50%;
+    transform: rotate(12deg);
+    transform: scale(1.0);
+}
+img:hover{
+    transform: scale(1.2) rotate(35deg);
+}
