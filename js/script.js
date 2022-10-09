@@ -6,13 +6,12 @@ const darkTheme = document.querySelector("img");
 darkTheme.addEventListener("click", darkThemeFunc);
 
 function darkThemeFunc(){
-    if(darkTheme.src = "img/sun.jpg"){
-        document.body.classList.toggle('dark');
-        darkTheme.src = "img/moon.png";
-    }
-    else if(darkTheme.src = "img/moon.png"){
-        document.body.classList.toggle('');
+    if(document.body.classList.contains("dark")) {
         darkTheme.src = "img/sun.jpg";
+        document.body.classList.remove("dark");
+    } else {
+        darkTheme.src = "img/moon.png";
+        document.body.classList.add("dark");
     }
 }
 
