@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: var(--transition);
+}
+:root {
+    --claculator-background-color: rgb(131 177 227);
+    --btn-numbers-color: black;
+    --border-color: royalblue;
+    --border-hover-color: royalblue;
+    --border-pixel: 2px;
+    --transition: .7s;
 }
 body{
     background-image: url(../img/2.webp);
@@ -9,17 +18,11 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     user-select: none;
-    --claculator-background-color: rgb(131 177 227);
-    --btn-numbers-color: black;
-    --border-color: royalblue;
-    --border-hover-color: royalblue;
-    --border-pixel: 2px;
-    --transition: 1s;
     transition: var(--transition);
 }
 body.dark{
-    background-image: url(../img/1.webp);
-    --claculator-background-color: black;
+    background-image: url(../img/1.jpg);
+    --claculator-background-color: rgba(0, 0, 15, 1);
     --btn-numbers-color: white;
     --border-color: black;
     --border-pixel: 2px;
